@@ -1,103 +1,65 @@
-let pscore=0;
-let cscore=0;
-let options=["rock","paper","scissors"];
-let option=null;
-const r = document.getElementById("r");
-const p = document.getElementById("p");
-const s = document.getElementById("s");
+const result = document.querySelectorAll(".result p")
+const score = document.querySelectorAll(".score p")
 
-const playerscore = document.getElementById("playerscore");
-const computerscore=document.getElementById("computerscore");
-const result = document.getElementById("result");
+let choices = ['rock','paper','scissor']
+let pscore = 0
+let cscore = 0
 
-const poption = document.getElementById("playeroption");
-const coption = document.getElementById("computeroption");
-const resetbutton = document.getElementById("reset-button");
-
-resetbutton.addEventListener("click",event=>{
-    playerscore.textContent="Player Score : 0";
-    computerscore.textContent= "Computer Score : 0";
-    poption.textContent="Player : - - - -";
-    coption.textContent="Computer : - - - -";
-    result.textContent="- - - - - -";
-    result.style.color="black";
-})
-
-r.addEventListener("click",event=>{
-    let computerOption = Math.floor(Math.random()*3);
-    let choice=options[computerOption];
-    poption.textContent="Player : rock";
-    coption.textContent="Computer : "+ choice;
-    if(choice==="paper"){
-        cscore++;
-        result.style.color="red";
-        result.textContent="You Lose";
+function play(pchoice){
+    let cchoice = choices[Math.floor(Math.random()*3)]
+    if(pchoice == 'rock'){
+        if(cchoice== 'paper'){
+            cscore++
+            result[2].textContent = "You Lose"
+            result[2].style = "color:red";
+        }
+        else if(cchoice === 'scissor'){
+            pscore++
+            result[2].textContent = "You Won"
+            result[2].style = "color:green";
+        }
+        else{
+            result[2].textContent = "Its'a Tie"
+            result[2].style = "color:black";
+        }
     }
-    else if(choice==="scissors"){
-        pscore++;
-        result.style.color="green";
-        result.textContent="You Won";
+    else  if(pchoice == 'scissor'){
+        if(cchoice== 'paper'){
+            pscore++
+            result[2].textContent = "You Won"
+            result[2].style = "color:green";
+        }
+        else if(cchoice === 'rock'){
+            cscore++
+            result[2].textContent = "You Lose"
+            result[2].style = "color:red";
+        }
+        else{
+            result[2].textContent = "Its'a Tie"
+            result[2].style = "color:black";
+        }
     }
-    else{
-        result.style.color="black";
-        result.textContent="It's a tie";
-
+    else {
+        if(cchoice== 'rock'){
+            pscore++
+            result[2].textContent = "You Won"
+            result[2].style = "color:green";
+        }
+        else if(cchoice === 'scissor'){
+            cscore++
+            result[2].textContent = "You Lose"
+            result[2].style = "color:red";
+        }
+        else{
+            result[2].textContent = "Its'a Tie"
+            result[2].style = "color:black";
+        }
     }
-    playerscore.textContent="Player Score :" + pscore;
-    computerscore.textContent= "Computer Score :" +cscore;
-});
-
-p.addEventListener("click",event=>{
-    let computerOption = Math.floor(Math.random()*3);
-    let choice=options[computerOption];
-    poption.textContent="Player : paper";
-    coption.textContent="Computer : "+ choice;
-    if(choice==="paper"){
-        result.style.color="black";
-        result.textContent="It's a tie";
-       
-        
-    }
-    else if(choice==="scissors"){
-        cscore++;
-        result.style.color="red";
-        result.textContent="You Lose";
-        
-    }
-    else{
-        pscore++;
-        result.style.color="green";
-        result.textContent="You Won";
-        
-    }
-    playerscore.textContent="Player Score :" + pscore;
-    computerscore.textContent= "Computer Score :" +cscore;
-});
-
-s.addEventListener("click",event=>{
-    let computerOption = Math.floor(Math.random()*3);
-    let choice=options[computerOption];
-    poption.textContent="Player : scissor";
-    coption.textContent="Computer : "+ choice;
-    if(choice==="paper"){
-        pscore++;
-        result.style.color="green";
-        result.textContent="You Won";
-        
-    }
-    else if(choice==="scissors"){
-        result.style.color="black";
-        result.textContent="It's a tie";
-    }
-    else{
-        cscore++;
-        result.style.color="red";
-        result.textContent="You Lose";
-    }
-    playerscore.textContent="Player Score :" + pscore;
-    computerscore.textContent= "Computer Score :" +cscore;
-});
-
-
-
-
+    result[0].textContent = "Your Selection : " + pchoice
+    result[1].textContent = "Robot's Selection : " + cchoice
+    score[0].textContent = "Your Score : " + pscore
+    score[1].textContent = "Robot Score : " +cscore
+}
+function reset(){
+    location.reload()
+}

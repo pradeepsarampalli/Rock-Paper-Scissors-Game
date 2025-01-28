@@ -3,27 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rock-Paper-Scissors</title>
-    <link rel="shortcut icon" href="5930147.png" type="image/x-icon">
+    <title>Rock - Paper - Sissors</title>
+    <link rel="shortcut icon" href="5930147.png" type="icon">
     <link rel="stylesheet" href="rps.css">
 </head>
 <body>
-    <div class="main">
-    <h1>Rock-Paper-Scissors</h1>
-    <div class="options">
-        <button id="r" >✊</button>
-        <button id="p" >✋</button>
-        <button id="s" >✌️</button>
+    <div id="home" class="introduction">
+    <h1>Rock - Paper - Scissors</h1>
+    <div class="icons">
+    <p>✂️</p>
+    <p>📰</p>
+    <p>🪨</p>
     </div>
-    <div>
-        <p id="playeroption">Player : - - - -</p>
-        <p id="computeroption">Computer : - - - -</p>
-        <p id="result">- - - - - -</p>
-        <p id="playerscore">Player Score : <span class="pscore">0</span></p>
-        <p id="computerscore">Computer Score : <span class="cscore">0</span></p>
-        <button id="reset-button" onlcick="reset()">Reset</button>
+    <p id="game-info">A classic game - Rock, Paper, Scissors! Choose one of the three choices - and see if you can beat the computer.
+        Will you win? The chance is random!</p>
+    <button id="letsplay"><a href="#game"> Let's Play</a></button>
+    <p>Test your Luck! 😊</p>
     </div>
-</div>
+    <div class="division">
+
+    </div>
+    <div id="game" class="main">
+        <h1>Rock - Paper - Sissors</h1>
+        <div class="game-section">
+            <p>Select Your Choice</p>
+            <div class="options">
+            <button onclick="play('scissor')">✂️</button>
+            <button onclick="play('rock')">🪨</button>
+            <button onclick="play('paper')">📰</button>
+            </div>
+            <div class="result">
+                <p>Your Selection : ________</p>
+                <p>Robot's Selection :_______</p>
+                <div id="resultstatus">
+                <p>........</p>
+            </div>
+            </div>
+            <div class="score">
+                <p>Your Score : 0</p>
+                <p>Robot Score : 0</p>
+            </div>
+            <div class="reset">
+                <button onclick="reset()">Reset</button>
+            </div>
+        </div>
+    </div>
     <script src="rps.js"></script>
 </body>
 </html>

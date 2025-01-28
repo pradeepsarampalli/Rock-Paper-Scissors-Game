@@ -1,65 +1,100 @@
 body{
+    font-family: verdana;
     text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color:#e0f7fa;
+}
+.icons{
+    display: flex;
+    justify-content: center;
+}
+.icons p{
+    margin: 0px;
+    font-size: 50px;
+}
+.introduction{
+    width: 500px;
+    border: 1px solid gray;
+    border-radius: 8px;
+    margin: 20px;
+    height: 60vh;
+    background-color: #e8f5e9;
+}
+#letsplay{
+    margin-top: 30px;
+    padding: 5px 10px;
+    border-radius: 8px;
+    border: 1px solid gray;
+    background-color: rgba(135, 207, 235, 0.722);
+    font-family: Verdana;
+}
+#game-info{
+    font-size: 20px;
+}
+a{
+    text-decoration: none;
+    color: black;
 }
 .main{
-    background-color: rgba(128, 128, 128, 0.400);
-    border-radius: 10px;
-    padding: 20px;
-    padding-right: 40px;
-    max-width: 550px;
-    
+    height: 100vh;
+    max-width: 500px;
+    text-align: center;
+}
+.game-section{
+    border: 1px solid green;
+    height: 65vh;;
+    margin: 0px;
+    border-radius: 8px;
+    background-color: #e8f5e9;
+}
+.options{
+    display: flex;
+    justify-content: space-evenly;
 }
 .options button{
-    width: 100px;
-    height: 100px;
+    width: 120px;
+    height: 120px;
     font-size: 70px;
-    border-radius: 50px;
-    background-color: rgba(0, 0, 255, 0.549);
-    margin-left: 25px;
-    border: none;
+    border-radius: 75px;
+    border: 1px solid gray;
 }
-.options button:hover{
-    background-color: rgba(0, 0, 255, 0.329);
-}
-#playeroption{
-    font-size: 30px;
-    margin-bottom: 0px;
-} 
-#computeroption{
-    font-size: 30px;
-    margin-top: 5px;
-    margin-bottom: 0px;
-}
-#result{
-    margin-top: 10px;
-    font-size: 40px;
-    margin-bottom: 10px;
-}
-#playerscore{
+.result{
+    margin-top: 20px;
+    padding-left: 5vh;
     font-size: 20px;
-    margin-top: 15px;
-    margin-bottom:5px;
 }
-#computerscore{
+.result p{
+    margin: 0px;
+}
+#resultstatus{
+    font-size: 50px !important;
+}
+.score{
+    padding-left: 5vh;
+    margin-top: 20px;
     font-size: 20px;
-    margin-top: 0px; 
 }
-.pscore{
-    color:green;
+.score p{
+    margin: 0px;
 }
-.cscore{
-    color: red;
+.reset{
+    margin: 20px;
 }
-#reset-button{
-    width: auto;
-    border-radius: 5px;
-    padding: 5px;
-    color: white;
+.reset button{
     font-size: 15px;
-    border: 1px solid orange;
-    background-color: red;
+    border-radius: 8px;
+    border: 1px solid skyblue;
+    padding: 5px 10px;
+    margin-right: 10px;
+    margin-left: 10px;
+    background-color: skyblue;
+}
+.division{
+    height: 35vh;
+}
+html{
+    scroll-behavior: smooth;
 }
