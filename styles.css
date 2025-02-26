@@ -117,6 +117,10 @@ html{
         border-radius: 8px;
         background-color: #e8f5e9;
     }
+    .icons p{
+        margin: 0px;
+        font-size: 30px;
+    }
 }
 @media (width>500px){
     .introduction{
