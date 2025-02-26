@@ -100,3 +100,44 @@ a{
 html{
     scroll-behavior: smooth;
 }
+
+@media (width<500px){
+    .introduction{
+        width: 380px;
+        border: 1px solid gray;
+        border-radius: 8px;
+        margin: 20px;
+        height: 80vh;
+        background-color: #e8f5e9;
+    }
+    .game-section{
+        border: 1px solid green;
+        height: 80vh;;
+        margin: 0px;
+        border-radius: 8px;
+        background-color: #e8f5e9;
+    }
+}
+@media (width>500px){
+    .introduction{
+        width: 80%;
+        max-width: 550px;
+        border: 1px solid gray;
+        border-radius: 8px;
+        margin: 20px;
+        padding: 0px 10px;
+        height: 80vh;
+        background-color: #e8f5e9;
+    }
+    .main{
+        width: 80%;
+    }
+    .game-section{
+        border: 1px solid green;
+        max-width: 550px;
+        height: 80vh;;
+        margin: 0px;
+        border-radius: 8px;
+        background-color: #e8f5e9;
+    }
+}
